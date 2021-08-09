@@ -12,6 +12,10 @@
 		3084E54926C1036C000A17DA /* TeamCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E54826C1036C000A17DA /* TeamCreationViewController.swift */; };
 		3084E54E26C1036D000A17DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3084E54D26C1036D000A17DA /* Assets.xcassets */; };
 		3084E55126C1036D000A17DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3084E54F26C1036D000A17DA /* LaunchScreen.storyboard */; };
+		3084E55F26C106FC000A17DA /* TeamCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E55E26C106FC000A17DA /* TeamCreationView.swift */; };
+		3084E56326C10AB4000A17DA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E56226C10AB4000A17DA /* UIViewExtension.swift */; };
+		3084E56526C128EF000A17DA /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E56426C128EF000A17DA /* Device.swift */; };
+		3084E56726C12950000A17DA /* ExtensionsForDeviceRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E56626C12950000A17DA /* ExtensionsForDeviceRatio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		3084E54D26C1036D000A17DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3084E55026C1036D000A17DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3084E55226C1036D000A17DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3084E55E26C106FC000A17DA /* TeamCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCreationView.swift; sourceTree = "<group>"; };
+		3084E56226C10AB4000A17DA /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		3084E56426C128EF000A17DA /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		3084E56626C12950000A17DA /* ExtensionsForDeviceRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForDeviceRatio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,9 @@
 				3084E54426C1036C000A17DA /* AppDelegate.swift */,
 				3084E54626C1036C000A17DA /* SceneDelegate.swift */,
 				3084E54F26C1036D000A17DA /* LaunchScreen.storyboard */,
+				3084E56226C10AB4000A17DA /* UIViewExtension.swift */,
+				3084E56426C128EF000A17DA /* Device.swift */,
+				3084E56626C12950000A17DA /* ExtensionsForDeviceRatio.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -84,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				3084E55C26C10556000A17DA /* Team Creation */,
-				3084E54826C1036C000A17DA /* TeamCreationViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -92,6 +102,7 @@
 		3084E55C26C10556000A17DA /* Team Creation */ = {
 			isa = PBXGroup;
 			children = (
+				3084E54826C1036C000A17DA /* TeamCreationViewController.swift */,
 				3084E55D26C10564000A17DA /* View */,
 			);
 			path = "Team Creation";
@@ -100,6 +111,7 @@
 		3084E55D26C10564000A17DA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3084E55E26C106FC000A17DA /* TeamCreationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,7 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3084E56326C10AB4000A17DA /* UIViewExtension.swift in Sources */,
+				3084E56726C12950000A17DA /* ExtensionsForDeviceRatio.swift in Sources */,
+				3084E55F26C106FC000A17DA /* TeamCreationView.swift in Sources */,
 				3084E54926C1036C000A17DA /* TeamCreationViewController.swift in Sources */,
+				3084E56526C128EF000A17DA /* Device.swift in Sources */,
 				3084E54526C1036C000A17DA /* AppDelegate.swift in Sources */,
 				3084E54726C1036C000A17DA /* SceneDelegate.swift in Sources */,
 			);
