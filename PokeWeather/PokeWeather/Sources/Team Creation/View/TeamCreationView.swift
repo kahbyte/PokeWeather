@@ -11,9 +11,9 @@ class TeamCreationView: UIView {
     
     private var curvedTopCard: UIView = {
         let view = UIView()
-        view.frame = CGRect(x: 0, y: 0, width: TeamUISizeConstants.curvedCardFrameSize.width, height: TeamUISizeConstants.curvedCardFrameSize.height)
-        view.layer.cornerRadius = TeamUISizeConstants.curvedCardCornerRadius
-        view.backgroundColor = UIColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1)
+        view.frame = CGRect(x: 0, y: 0, width: TeamUIConstants.curvedCardFrameSize.width, height: TeamUIConstants.curvedCardFrameSize.height)
+        view.layer.cornerRadius = TeamUIConstants.curvedCardCornerRadius
+        view.backgroundColor = TeamUIConstants.pokeWeatherTurquoise
         return view
     }()
     
@@ -27,7 +27,7 @@ Pokémon team is?
 """
         
         label.textColor = .white
-        label.font = UIFont(name: "Helvetica Neue Bold", size: TeamUISizeConstants.cardTitleLabelFontSize)
+        label.font = UIFont(name: "Helvetica Neue Bold", size: TeamUIConstants.cardTitleLabelFontSize)
         label.numberOfLines = 0
         return label
     }()
@@ -35,7 +35,7 @@ Pokémon team is?
     private var importantDateLabel: UILabel = {
         let label = UILabel()
         label.text = "Enter an important date for you"
-        label.font = UIFont(name: "Helvetica Neue", size: TeamUISizeConstants.dateLabelFontSize)
+        label.font = UIFont(name: "Helvetica Neue", size: TeamUIConstants.dateLabelFontSize)
         return label
     }()
     
@@ -53,11 +53,11 @@ Pokémon team is?
     private var randomDateButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Random Date", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: TeamUISizeConstants.mainButtonFontSize)
-        button.layer.cornerRadius = TeamUISizeConstants.mainButtonCornerRadius
-        button.layer.borderWidth = TeamUISizeConstants.mainButtonBorderWidth
-        button.layer.borderColor = CGColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1)
-        button.setTitleColor(UIColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: TeamUIConstants.mainButtonFontSize)
+        button.layer.cornerRadius = TeamUIConstants.mainButtonCornerRadius
+        button.layer.borderWidth = TeamUIConstants.mainButtonBorderWidth
+        button.layer.borderColor = TeamUIConstants.pokeWeatherTurquoise?.cgColor
+        button.setTitleColor(TeamUIConstants.pokeWeatherTurquoise, for: .normal)
         button.addTarget(self, action: #selector(randomDate), for: .touchUpInside)
         return button
     }()
@@ -65,9 +65,9 @@ Pokémon team is?
     private var continueButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Continue", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: TeamUISizeConstants.dateLabelFontSize)
-        button.layer.cornerRadius = TeamUISizeConstants.mainButtonCornerRadius
-        button.layer.backgroundColor = CGColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1)
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: TeamUIConstants.dateLabelFontSize)
+        button.layer.cornerRadius = TeamUIConstants.mainButtonCornerRadius
+        button.layer.backgroundColor = TeamUIConstants.pokeWeatherTurquoise?.cgColor
         button.setTitleColor(.white, for: .normal)
         return button
     }()
@@ -116,7 +116,7 @@ Pokémon team is?
         cardTitleLabel.addConstraints(top: nil, bottom: curvedTopCard.bottomAnchor, leading: curvedTopCard.leadingAnchor, trailing: curvedTopCard.trailingAnchor, centerX: nil, centerY: nil, paddingTop: 0, paddingLeft: 36.adjusted, paddingBottom: -60.adjusted, paddingRight: 70.adjusted, width: 0, height: 0)
     }
     
-    private struct TeamUISizeConstants {
+    private struct TeamUIConstants {
         static let curvedCardFrameSize = (width: 414.adjusted, height: 340.adjusted)
         static let curvedCardCornerRadius = 40.adjusted
         static let cardTitleLabelFontSize = 32.0.adjusted
@@ -124,5 +124,6 @@ Pokémon team is?
         static let mainButtonFontSize = 19.0.adjusted
         static let mainButtonCornerRadius = 20.adjusted
         static let mainButtonBorderWidth = 2.adjusted
+        static let pokeWeatherTurquoise = UIColor(named: "pokeWeatherTurquoise")
     }
 }

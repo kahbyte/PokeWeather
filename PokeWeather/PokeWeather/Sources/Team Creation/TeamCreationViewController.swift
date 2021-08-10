@@ -9,7 +9,7 @@ import UIKit
 
 final class TeamCreationViewController: UIViewController {
     
-    private var teamCreationView: TeamCreationView? = nil
+    private var teamCreationView: HomeView? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +19,9 @@ final class TeamCreationViewController: UIViewController {
     }
     
     private func buildView() {
-        view = TeamCreationView()
+        view = HomeView()
         
-        teamCreationView = view as? TeamCreationView
+        teamCreationView = view as? HomeView
     }
     
     
