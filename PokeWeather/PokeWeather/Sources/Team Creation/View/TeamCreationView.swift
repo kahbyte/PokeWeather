@@ -11,8 +11,8 @@ class TeamCreationView: UIView {
     
     private var curvedTopCard: UIView = {
         let view = UIView()
-        view.frame = CGRect(x: 0, y: 0, width: 414, height: 340)
-        view.layer.cornerRadius = 40
+        view.frame = CGRect(x: 0, y: 0, width: TeamUISizeConstants.curvedCardFrameSize.width, height: TeamUISizeConstants.curvedCardFrameSize.height)
+        view.layer.cornerRadius = TeamUISizeConstants.curvedCardCornerRadius
         view.backgroundColor = UIColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1)
         return view
     }()
@@ -27,7 +27,7 @@ Pokémon team is?
 """
         
         label.textColor = .white
-        label.font = UIFont(name: "Helvetica Neue Bold", size: 32)
+        label.font = UIFont(name: "Helvetica Neue Bold", size: TeamUISizeConstants.cardTitleLabelFontSize)
         label.numberOfLines = 0
         return label
     }()
@@ -35,7 +35,7 @@ Pokémon team is?
     private var importantDateLabel: UILabel = {
         let label = UILabel()
         label.text = "Enter an important date for you"
-        label.font = UIFont(name: "Helvetica Neue", size: 20.0)
+        label.font = UIFont(name: "Helvetica Neue", size: TeamUISizeConstants.dateLabelFontSize)
         return label
     }()
     
@@ -53,9 +53,9 @@ Pokémon team is?
     private var randomDateButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Random Date", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 19.0)
-        button.layer.cornerRadius = 20
-        button.layer.borderWidth = 2
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: TeamUISizeConstants.mainButtonFontSize)
+        button.layer.cornerRadius = TeamUISizeConstants.mainButtonCornerRadius
+        button.layer.borderWidth = TeamUISizeConstants.mainButtonBorderWidth
         button.layer.borderColor = CGColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1)
         button.setTitleColor(UIColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1), for: .normal)
         button.addTarget(self, action: #selector(randomDate), for: .touchUpInside)
@@ -65,8 +65,8 @@ Pokémon team is?
     private var continueButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Continue", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 19.0)
-        button.layer.cornerRadius = 20
+        button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: TeamUISizeConstants.dateLabelFontSize)
+        button.layer.cornerRadius = TeamUISizeConstants.mainButtonCornerRadius
         button.layer.backgroundColor = CGColor(red: 3/255, green: 198/255, blue: 187/255, alpha: 1)
         button.setTitleColor(.white, for: .normal)
         return button
@@ -93,7 +93,7 @@ Pokémon team is?
         curvedTopCard.addSubview(cardTitleLabel)
     }
     
-    //Essa função não vai ficar aqui
+    //Essa função não vai ficar aqui. O lugar dela é como uma intent na viewmodel
     @objc private func randomDate() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YY/M/d"
@@ -103,16 +103,26 @@ Pokémon team is?
     }
     
     private func setConstraints() {
-        curvedTopCard.addConstraints(top: topAnchor, bottom: nil, leading: leadingAnchor, trailing: trailingAnchor, centerX: centerXAnchor, centerY: nil, paddingTop: -35, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 340)
+        curvedTopCard.addConstraints(top: topAnchor, bottom: nil, leading: leadingAnchor, trailing: trailingAnchor, centerX: centerXAnchor, centerY: nil, paddingTop: -35.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 340.adjusted)
         
-        importantDateLabel.addConstraints(top: curvedTopCard.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 46, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        importantDateLabel.addConstraints(top: curvedTopCard.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 46.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
-        datePicker.addConstraints(top: importantDateLabel.bottomAnchor, bottom: nil, leading: leadingAnchor, trailing: trailingAnchor, centerX: nil, centerY: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        datePicker.addConstraints(top: importantDateLabel.bottomAnchor, bottom: nil, leading: leadingAnchor, trailing: trailingAnchor, centerX: nil, centerY: nil, paddingTop: 20.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
-        randomDateButton.addConstraints(top: datePicker.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 57, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 180, height: 45)
+        randomDateButton.addConstraints(top: datePicker.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 57.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 180.adjusted, height: 45.adjusted)
          
-        continueButton.addConstraints(top: randomDateButton.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 16, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 180, height: 45)
+        continueButton.addConstraints(top: randomDateButton.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 16.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 180.adjusted, height: 45.adjusted)
         
-        cardTitleLabel.addConstraints(top: nil, bottom: curvedTopCard.bottomAnchor, leading: curvedTopCard.leadingAnchor, trailing: curvedTopCard.trailingAnchor, centerX: nil, centerY: nil, paddingTop: 0, paddingLeft: 36, paddingBottom: -60, paddingRight: 70, width: 0, height: 0)
+        cardTitleLabel.addConstraints(top: nil, bottom: curvedTopCard.bottomAnchor, leading: curvedTopCard.leadingAnchor, trailing: curvedTopCard.trailingAnchor, centerX: nil, centerY: nil, paddingTop: 0, paddingLeft: 36.adjusted, paddingBottom: -60.adjusted, paddingRight: 70.adjusted, width: 0, height: 0)
+    }
+    
+    private struct TeamUISizeConstants {
+        static let curvedCardFrameSize = (width: 414.adjusted, height: 340.adjusted)
+        static let curvedCardCornerRadius = 40.adjusted
+        static let cardTitleLabelFontSize = 32.0.adjusted
+        static let dateLabelFontSize = 20.0.adjusted
+        static let mainButtonFontSize = 19.0.adjusted
+        static let mainButtonCornerRadius = 20.adjusted
+        static let mainButtonBorderWidth = 2.adjusted
     }
 }

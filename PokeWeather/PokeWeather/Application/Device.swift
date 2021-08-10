@@ -8,7 +8,7 @@
 import UIKit
 
 class Device {
-    static let base: CGFloat = 896
+    static let base: CGFloat = 414 // iphone 11 width
     
     static var ratio: CGFloat {
         return UIScreen.main.bounds.width / base
