@@ -7,6 +7,10 @@
 
 import UIKit
 
+struct TeamCreationViewConfig {
+    let importantDateLabel: String = "Enter an important date for you"
+}
+
 class TeamCreationView: UIView {
     
     private var curvedTopCard: UIView = {
@@ -34,7 +38,6 @@ Pokémon team is?
     
     private var importantDateLabel: UILabel = {
         let label = UILabel()
-        label.text = "Enter an important date for you"
         label.font = UIFont(name: "Helvetica Neue", size: TeamUIConstants.dateLabelFontSize)
         return label
     }()
@@ -59,6 +62,7 @@ Pokémon team is?
         button.layer.borderColor = TeamUIConstants.pokeWeatherTurquoise?.cgColor
         button.setTitleColor(TeamUIConstants.pokeWeatherTurquoise, for: .normal)
         button.addTarget(self, action: #selector(randomDate), for: .touchUpInside)
+        button.contentEdgeInsets = .init(top: 15, left: 25, bottom: 15, right: 25)
         return button
     }()
     
@@ -93,6 +97,10 @@ Pokémon team is?
         curvedTopCard.addSubview(cardTitleLabel)
     }
     
+    func setupTeamCreationView(_ configuration: TeamCreationViewConfig) {
+        importantDateLabel.text = configuration.importantDateLabel
+    }
+    
     //Essa função não vai ficar aqui. O lugar dela é como uma intent na viewmodel
     @objc private func randomDate() {
         let dateFormatter = DateFormatter()
@@ -103,15 +111,15 @@ Pokémon team is?
     }
     
     private func setConstraints() {
-        curvedTopCard.addConstraints(top: topAnchor, bottom: nil, leading: leadingAnchor, trailing: trailingAnchor, centerX: centerXAnchor, centerY: nil, paddingTop: -35.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 340.adjusted)
+        curvedTopCard.addConstraints(top: topAnchor, leading: leadingAnchor, trailing: trailingAnchor, centerX: centerXAnchor, centerY: nil, paddingTop: -35.adjusted, height: 340.adjusted)
         
-        importantDateLabel.addConstraints(top: curvedTopCard.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 46.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        importantDateLabel.addConstraints(top: curvedTopCard.bottomAnchor, centerX: centerXAnchor, paddingTop: 46.adjusted)
         
-        datePicker.addConstraints(top: importantDateLabel.bottomAnchor, bottom: nil, leading: leadingAnchor, trailing: trailingAnchor, centerX: nil, centerY: nil, paddingTop: 20.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        datePicker.addConstraints(top: importantDateLabel.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, paddingTop: 20.adjusted)
         
-        randomDateButton.addConstraints(top: datePicker.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 57.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 180.adjusted, height: 45.adjusted)
+        randomDateButton.addConstraints(top: datePicker.bottomAnchor, centerX: centerXAnchor, paddingTop: 57.adjusted, height: 45.adjusted)
          
-        continueButton.addConstraints(top: randomDateButton.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 16.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 180.adjusted, height: 45.adjusted)
+        continueButton.addConstraints(top: randomDateButton.bottomAnchor, centerX: centerXAnchor, centerY: nil, paddingTop: 16.adjusted, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 180.adjusted, height: 45.adjusted)
         
         cardTitleLabel.addConstraints(top: nil, bottom: curvedTopCard.bottomAnchor, leading: curvedTopCard.leadingAnchor, trailing: curvedTopCard.trailingAnchor, centerX: nil, centerY: nil, paddingTop: 0, paddingLeft: 36.adjusted, paddingBottom: -60.adjusted, paddingRight: 70.adjusted, width: 0, height: 0)
     }
@@ -126,4 +134,24 @@ Pokémon team is?
         static let mainButtonBorderWidth = 2.adjusted
         static let pokeWeatherTurquoise = UIColor(named: "pokeWeatherTurquoise")
     }
+    
+    
 }
+
+//protocol ViewCodeConfiguration: AnyObject {
+//    func setupViewCode()
+//    func setupViewHierarchy()
+//    func setupConstraints()
+//    func configureViews()
+//}
+//
+//extension ViewCodeConfiguration {
+//    func setupViewCode() {
+//        setupViewHierarchy()
+//        setupConstraints()
+//        configureViews()
+//    }
+//    func setupViewHierarchy() {}
+//    func setupConstraints() {}
+//    func configureViews() {}
+//}

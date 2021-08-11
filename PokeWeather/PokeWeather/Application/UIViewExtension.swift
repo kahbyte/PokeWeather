@@ -8,18 +8,18 @@
 import UIKit
 
 extension UIView {
-    func addConstraints(top: NSLayoutYAxisAnchor?,
-                        bottom: NSLayoutYAxisAnchor?,
-                        leading: NSLayoutXAxisAnchor?,
-                        trailing: NSLayoutXAxisAnchor?,
-                        centerX: NSLayoutXAxisAnchor?,
-                        centerY: NSLayoutYAxisAnchor?,
-                        paddingTop: CGFloat,
-                        paddingLeft: CGFloat,
-                        paddingBottom: CGFloat,
-                        paddingRight: CGFloat,
-                        width: CGFloat,
-                        height: CGFloat)
+    func addConstraints(top: NSLayoutYAxisAnchor? = nil,
+                        bottom: NSLayoutYAxisAnchor? = nil,
+                        leading: NSLayoutXAxisAnchor? = nil,
+                        trailing: NSLayoutXAxisAnchor? = nil,
+                        centerX: NSLayoutXAxisAnchor? = nil,
+                        centerY: NSLayoutYAxisAnchor? = nil,
+                        paddingTop: CGFloat = 0,
+                        paddingLeft: CGFloat = 0,
+                        paddingBottom: CGFloat = 0,
+                        paddingRight: CGFloat = 0,
+                        width: CGFloat = 0,
+                        height: CGFloat = 0)
     {
         translatesAutoresizingMaskIntoConstraints = false
         

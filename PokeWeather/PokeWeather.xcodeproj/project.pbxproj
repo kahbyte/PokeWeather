@@ -26,6 +26,12 @@
 		3064592E26C2651C00C656CE /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064592D26C2651C00C656CE /* WeatherResponse.swift */; };
 		3064593126C269FD00C656CE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064593026C269FD00C656CE /* SettingsViewController.swift */; };
 		3064593326C26A1B00C656CE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064593226C26A1B00C656CE /* SettingsView.swift */; };
+		3064594626C2734E00C656CE /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064594526C2734E00C656CE /* APIHandler.swift */; };
+		3064594826C2751700C656CE /* ResponseHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064594726C2751700C656CE /* ResponseHandler+Extension.swift */; };
+		3064594B26C2767B00C656CE /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064594A26C2767B00C656CE /* APILoader.swift */; };
+		3064594D26C2794300C656CE /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064594C26C2794300C656CE /* OpenWeatherAPI.swift */; };
+		3064595126C2828500C656CE /* TeamCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064595026C2828500C656CE /* TeamCreationViewModel.swift */; };
+		3064595426C286C400C656CE /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064595326C286C400C656CE /* PokeAPI.swift */; };
 		3084E54526C1036C000A17DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E54426C1036C000A17DA /* AppDelegate.swift */; };
 		3084E54726C1036C000A17DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E54626C1036C000A17DA /* SceneDelegate.swift */; };
 		3084E54926C1036C000A17DA /* TeamCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E54826C1036C000A17DA /* TeamCreationViewController.swift */; };
@@ -35,6 +41,14 @@
 		3084E56326C10AB4000A17DA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E56226C10AB4000A17DA /* UIViewExtension.swift */; };
 		3084E56526C128EF000A17DA /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E56426C128EF000A17DA /* Device.swift */; };
 		3084E56726C12950000A17DA /* ExtensionsForDeviceRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084E56626C12950000A17DA /* ExtensionsForDeviceRatio.swift */; };
+		308508D126C331E7009B25C2 /* TeamCreationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508D026C331E7009B25C2 /* TeamCreationCoordinator.swift */; };
+		308508D326C3384E009B25C2 /* InitAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508D226C3384E009B25C2 /* InitAllViewController.swift */; };
+		308508D526C338E5009B25C2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508D426C338E5009B25C2 /* MainCoordinator.swift */; };
+		308508D726C33CCD009B25C2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508D626C33CCD009B25C2 /* Coordinator.swift */; };
+		308508DA26C34370009B25C2 /* CommonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508D926C34370009B25C2 /* CommonsCoordinator.swift */; };
+		308508DC26C34449009B25C2 /* MainCoordinator+Flows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508DB26C34449009B25C2 /* MainCoordinator+Flows.swift */; };
+		308508DE26C34CBE009B25C2 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508DD26C34CBE009B25C2 /* HomeCoordinator.swift */; };
+		308508E026C34D0A009B25C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508DF26C34D0A009B25C2 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +71,12 @@
 		3064592D26C2651C00C656CE /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		3064593026C269FD00C656CE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3064593226C26A1B00C656CE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3064594526C2734E00C656CE /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		3064594726C2751700C656CE /* ResponseHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseHandler+Extension.swift"; sourceTree = "<group>"; };
+		3064594A26C2767B00C656CE /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
+		3064594C26C2794300C656CE /* OpenWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPI.swift; sourceTree = "<group>"; };
+		3064595026C2828500C656CE /* TeamCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCreationViewModel.swift; sourceTree = "<group>"; };
+		3064595326C286C400C656CE /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
 		3084E54126C1036C000A17DA /* PokeWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3084E54426C1036C000A17DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3084E54626C1036C000A17DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +88,14 @@
 		3084E56226C10AB4000A17DA /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		3084E56426C128EF000A17DA /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		3084E56626C12950000A17DA /* ExtensionsForDeviceRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForDeviceRatio.swift; sourceTree = "<group>"; };
+		308508D026C331E7009B25C2 /* TeamCreationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCreationCoordinator.swift; sourceTree = "<group>"; };
+		308508D226C3384E009B25C2 /* InitAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitAllViewController.swift; sourceTree = "<group>"; };
+		308508D426C338E5009B25C2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		308508D626C33CCD009B25C2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		308508D926C34370009B25C2 /* CommonsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonsCoordinator.swift; sourceTree = "<group>"; };
+		308508DB26C34449009B25C2 /* MainCoordinator+Flows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinator+Flows.swift"; sourceTree = "<group>"; };
+		308508DD26C34CBE009B25C2 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		308508DF26C34D0A009B25C2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				3064590A26C2176600C656CE /* View */,
+				308508DF26C34D0A009B25C2 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -94,6 +123,7 @@
 			children = (
 				3064590B26C2177F00C656CE /* HomeView.swift */,
 				3064590F26C2246600C656CE /* StrongestPokemonCard.swift */,
+				308508DD26C34CBE009B25C2 /* HomeCoordinator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +173,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3064593626C26DAA00C656CE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3064594526C2734E00C656CE /* APIHandler.swift */,
+				3064594726C2751700C656CE /* ResponseHandler+Extension.swift */,
+				3064594A26C2767B00C656CE /* APILoader.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3064593A26C26E0C00C656CE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3064594C26C2794300C656CE /* OpenWeatherAPI.swift */,
+				3064595326C286C400C656CE /* PokeAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3064595226C2828B00C656CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3064595026C2828500C656CE /* TeamCreationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3084E53826C1036C000A17DA = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +221,8 @@
 			children = (
 				3084E55926C103B2000A17DA /* Application */,
 				3084E55A26C103BB000A17DA /* Resources */,
+				3064593A26C26E0C00C656CE /* Service */,
+				3064593626C26DAA00C656CE /* Networking */,
 				3084E55B26C103C1000A17DA /* Sources */,
 				3084E55226C1036D000A17DA /* Info.plist */,
 			);
@@ -196,6 +255,7 @@
 		3084E55B26C103C1000A17DA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				308508D826C3435C009B25C2 /* RootCoordinator */,
 				3064592A26C24ACA00C656CE /* Models */,
 				3084E55C26C10556000A17DA /* Team Creation */,
 				3064590726C2175000C656CE /* Home */,
@@ -207,8 +267,10 @@
 		3084E55C26C10556000A17DA /* Team Creation */ = {
 			isa = PBXGroup;
 			children = (
+				308508D026C331E7009B25C2 /* TeamCreationCoordinator.swift */,
 				3084E54826C1036C000A17DA /* TeamCreationViewController.swift */,
 				3084E55D26C10564000A17DA /* View */,
+				3064595226C2828B00C656CE /* ViewModel */,
 			);
 			path = "Team Creation";
 			sourceTree = "<group>";
@@ -219,6 +281,18 @@
 				3084E55E26C106FC000A17DA /* TeamCreationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		308508D826C3435C009B25C2 /* RootCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				308508D226C3384E009B25C2 /* InitAllViewController.swift */,
+				308508D426C338E5009B25C2 /* MainCoordinator.swift */,
+				308508D626C33CCD009B25C2 /* Coordinator.swift */,
+				308508D926C34370009B25C2 /* CommonsCoordinator.swift */,
+				308508DB26C34449009B25C2 /* MainCoordinator+Flows.swift */,
+			);
+			path = RootCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,20 +376,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3064594B26C2767B00C656CE /* APILoader.swift in Sources */,
 				3084E56326C10AB4000A17DA /* UIViewExtension.swift in Sources */,
+				3064594826C2751700C656CE /* ResponseHandler+Extension.swift in Sources */,
 				3084E56726C12950000A17DA /* ExtensionsForDeviceRatio.swift in Sources */,
+				3064594626C2734E00C656CE /* APIHandler.swift in Sources */,
+				3064595426C286C400C656CE /* PokeAPI.swift in Sources */,
 				3084E55F26C106FC000A17DA /* TeamCreationView.swift in Sources */,
+				308508DA26C34370009B25C2 /* CommonsCoordinator.swift in Sources */,
 				3084E54926C1036C000A17DA /* TeamCreationViewController.swift in Sources */,
+				308508D726C33CCD009B25C2 /* Coordinator.swift in Sources */,
+				308508D526C338E5009B25C2 /* MainCoordinator.swift in Sources */,
 				3064592826C22DF500C656CE /* ParticleScene.swift in Sources */,
+				3064595126C2828500C656CE /* TeamCreationViewModel.swift in Sources */,
+				308508D326C3384E009B25C2 /* InitAllViewController.swift in Sources */,
+				308508D126C331E7009B25C2 /* TeamCreationCoordinator.swift in Sources */,
 				3084E56526C128EF000A17DA /* Device.swift in Sources */,
 				3064592C26C24BB400C656CE /* PokemonResponse.swift in Sources */,
 				3064593326C26A1B00C656CE /* SettingsView.swift in Sources */,
 				3064592E26C2651C00C656CE /* WeatherResponse.swift in Sources */,
+				308508E026C34D0A009B25C2 /* HomeViewController.swift in Sources */,
 				3064591026C2246600C656CE /* StrongestPokemonCard.swift in Sources */,
+				308508DE26C34CBE009B25C2 /* HomeCoordinator.swift in Sources */,
 				3064590C26C2177F00C656CE /* HomeView.swift in Sources */,
+				308508DC26C34449009B25C2 /* MainCoordinator+Flows.swift in Sources */,
 				3064593126C269FD00C656CE /* SettingsViewController.swift in Sources */,
 				3084E54526C1036C000A17DA /* AppDelegate.swift in Sources */,
 				3084E54726C1036C000A17DA /* SceneDelegate.swift in Sources */,
+				3064594D26C2794300C656CE /* OpenWeatherAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

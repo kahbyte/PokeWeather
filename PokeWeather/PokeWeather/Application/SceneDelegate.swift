@@ -21,10 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let safeWindow = UIWindow(windowScene: windowScene)
         safeWindow.frame = UIScreen.main.bounds
-        safeWindow.rootViewController = TeamCreationViewController()
+        safeWindow.rootViewController = InitAllViewController()
         safeWindow.makeKeyAndVisible()
         
         window = safeWindow
+        MainCoordinator.shared.setup(window: window!)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
