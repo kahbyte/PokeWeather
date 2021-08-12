@@ -30,7 +30,7 @@ extension MainCoordinator {
     func showHome() {
         guard let topViewController = topController else { return }
         
-        let coordinator = HomeCoordinator(topViewController: topViewController, delegate: CommonsCoordinatorDelegateImplementation())
+        let coordinator = HomeAndTeamFlowCoordinator(topViewController: topViewController, delegate: CommonsCoordinatorDelegateImplementation())
         MainCoordinator.shared.childCoordinators.append(coordinator)
         coordinator.start()
     }

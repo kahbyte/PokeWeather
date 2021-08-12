@@ -12,7 +12,8 @@ struct TeamCreationViewConfig {
 }
 
 class TeamCreationView: UIView {
-    
+    var delegate: vcTestProtocol?
+
     private var curvedTopCard: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: TeamUIConstants.curvedCardFrameSize.width, height: TeamUIConstants.curvedCardFrameSize.height)
@@ -72,12 +73,14 @@ Pokémon team is?
         button.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: TeamUIConstants.dateLabelFontSize)
         button.layer.cornerRadius = TeamUIConstants.mainButtonCornerRadius
         button.layer.backgroundColor = TeamUIConstants.pokeWeatherTurquoise?.cgColor
+        button.addTarget(self, action: #selector(continueToHome), for: .touchUpInside)
         button.setTitleColor(.white, for: .normal)
         return button
     }()
     
-    init() {
+    init(delegate: vcTestProtocol) {
         super.init(frame: .zero)
+        self.delegate = delegate
         addSubviews()
         setConstraints()
         backgroundColor = .white
@@ -108,6 +111,10 @@ Pokémon team is?
         
         let date = dateFormatter.date(from: "\(Int.random(in: 1978...1998))/\(Int.random(in: 1...12))/\(Int.random(in: 1...28))") ?? Date()
         datePicker.setDate(date, animated: true)
+    }
+    
+    @objc private func continueToHome() {
+        delegate?.showHome()
     }
     
     private func setConstraints() {

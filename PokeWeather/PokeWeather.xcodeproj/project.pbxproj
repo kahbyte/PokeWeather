@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3029EBF326C5132C005E23A7 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029EBF226C5132C005E23A7 /* TeamViewController.swift */; };
+		3029EBF526C513B1005E23A7 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029EBF426C513B1005E23A7 /* TeamView.swift */; };
+		3029EBF726C515CC005E23A7 /* PokemonInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029EBF626C515CC005E23A7 /* PokemonInfoCard.swift */; };
 		3064590C26C2177F00C656CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064590B26C2177F00C656CE /* HomeView.swift */; };
 		3064590E26C2186500C656CE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3064590D26C2186500C656CE /* Colors.xcassets */; };
 		3064591026C2246600C656CE /* StrongestPokemonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064590F26C2246600C656CE /* StrongestPokemonCard.swift */; };
@@ -47,11 +50,15 @@
 		308508D726C33CCD009B25C2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508D626C33CCD009B25C2 /* Coordinator.swift */; };
 		308508DA26C34370009B25C2 /* CommonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508D926C34370009B25C2 /* CommonsCoordinator.swift */; };
 		308508DC26C34449009B25C2 /* MainCoordinator+Flows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508DB26C34449009B25C2 /* MainCoordinator+Flows.swift */; };
-		308508DE26C34CBE009B25C2 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508DD26C34CBE009B25C2 /* HomeCoordinator.swift */; };
+		308508DE26C34CBE009B25C2 /* HomeAndTeamFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508DD26C34CBE009B25C2 /* HomeAndTeamFlowCoordinator.swift */; };
 		308508E026C34D0A009B25C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308508DF26C34D0A009B25C2 /* HomeViewController.swift */; };
+		3085092326C3F998009B25C2 /* HomeAndTeamTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085092226C3F998009B25C2 /* HomeAndTeamTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3029EBF226C5132C005E23A7 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		3029EBF426C513B1005E23A7 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		3029EBF626C515CC005E23A7 /* PokemonInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoCard.swift; sourceTree = "<group>"; };
 		3064590B26C2177F00C656CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3064590D26C2186500C656CE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3064590F26C2246600C656CE /* StrongestPokemonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongestPokemonCard.swift; sourceTree = "<group>"; };
@@ -94,8 +101,9 @@
 		308508D626C33CCD009B25C2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		308508D926C34370009B25C2 /* CommonsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonsCoordinator.swift; sourceTree = "<group>"; };
 		308508DB26C34449009B25C2 /* MainCoordinator+Flows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinator+Flows.swift"; sourceTree = "<group>"; };
-		308508DD26C34CBE009B25C2 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		308508DD26C34CBE009B25C2 /* HomeAndTeamFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAndTeamFlowCoordinator.swift; sourceTree = "<group>"; };
 		308508DF26C34D0A009B25C2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3085092226C3F998009B25C2 /* HomeAndTeamTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAndTeamTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +117,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3029EBF026C51130005E23A7 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				3029EBF126C51318005E23A7 /* View */,
+				3029EBF226C5132C005E23A7 /* TeamViewController.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		3029EBF126C51318005E23A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3029EBF426C513B1005E23A7 /* TeamView.swift */,
+				3029EBF626C515CC005E23A7 /* PokemonInfoCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3064590726C2175000C656CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3064592F26C269DB00C656CE /* Settings */,
 				3064590A26C2176600C656CE /* View */,
 				308508DF26C34D0A009B25C2 /* HomeViewController.swift */,
 			);
@@ -123,7 +150,6 @@
 			children = (
 				3064590B26C2177F00C656CE /* HomeView.swift */,
 				3064590F26C2246600C656CE /* StrongestPokemonCard.swift */,
-				308508DD26C34CBE009B25C2 /* HomeCoordinator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,8 +284,7 @@
 				308508D826C3435C009B25C2 /* RootCoordinator */,
 				3064592A26C24ACA00C656CE /* Models */,
 				3084E55C26C10556000A17DA /* Team Creation */,
-				3064590726C2175000C656CE /* Home */,
-				3064592F26C269DB00C656CE /* Settings */,
+				3085092126C3F94D009B25C2 /* HomeAndTeamFlow */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -293,6 +318,17 @@
 				308508DB26C34449009B25C2 /* MainCoordinator+Flows.swift */,
 			);
 			path = RootCoordinator;
+			sourceTree = "<group>";
+		};
+		3085092126C3F94D009B25C2 /* HomeAndTeamFlow */ = {
+			isa = PBXGroup;
+			children = (
+				3085092226C3F998009B25C2 /* HomeAndTeamTabBarController.swift */,
+				308508DD26C34CBE009B25C2 /* HomeAndTeamFlowCoordinator.swift */,
+				3064590726C2175000C656CE /* Home */,
+				3029EBF026C51130005E23A7 /* Team */,
+			);
+			path = HomeAndTeamFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,16 +424,20 @@
 				308508D726C33CCD009B25C2 /* Coordinator.swift in Sources */,
 				308508D526C338E5009B25C2 /* MainCoordinator.swift in Sources */,
 				3064592826C22DF500C656CE /* ParticleScene.swift in Sources */,
+				3029EBF526C513B1005E23A7 /* TeamView.swift in Sources */,
 				3064595126C2828500C656CE /* TeamCreationViewModel.swift in Sources */,
 				308508D326C3384E009B25C2 /* InitAllViewController.swift in Sources */,
+				3029EBF726C515CC005E23A7 /* PokemonInfoCard.swift in Sources */,
 				308508D126C331E7009B25C2 /* TeamCreationCoordinator.swift in Sources */,
+				3085092326C3F998009B25C2 /* HomeAndTeamTabBarController.swift in Sources */,
 				3084E56526C128EF000A17DA /* Device.swift in Sources */,
 				3064592C26C24BB400C656CE /* PokemonResponse.swift in Sources */,
 				3064593326C26A1B00C656CE /* SettingsView.swift in Sources */,
+				3029EBF326C5132C005E23A7 /* TeamViewController.swift in Sources */,
 				3064592E26C2651C00C656CE /* WeatherResponse.swift in Sources */,
 				308508E026C34D0A009B25C2 /* HomeViewController.swift in Sources */,
 				3064591026C2246600C656CE /* StrongestPokemonCard.swift in Sources */,
-				308508DE26C34CBE009B25C2 /* HomeCoordinator.swift in Sources */,
+				308508DE26C34CBE009B25C2 /* HomeAndTeamFlowCoordinator.swift in Sources */,
 				3064590C26C2177F00C656CE /* HomeView.swift in Sources */,
 				308508DC26C34449009B25C2 /* MainCoordinator+Flows.swift in Sources */,
 				3064593126C269FD00C656CE /* SettingsViewController.swift in Sources */,

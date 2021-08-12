@@ -7,7 +7,15 @@
 
 import UIKit
 
-final class TeamCreationViewController: UIViewController {
+protocol vcTestProtocol {
+    func showHome()
+}
+
+final class TeamCreationViewController: UIViewController, vcTestProtocol {
+    func showHome() {
+        viewModel.showHome()
+    }
+    
     
     private var teamCreationView: TeamCreationView? = nil
     private var viewModel       : TeamCreationViewModel
@@ -26,17 +34,18 @@ final class TeamCreationViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
+        teamCreationView?.delegate = self
         
         buildView()
         setup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewModel.showHome()
+
     }
     
     private func buildView() {
-        view = TeamCreationView()
+        view = TeamCreationView(delegate: self)
         
         teamCreationView = view as? TeamCreationView
     }

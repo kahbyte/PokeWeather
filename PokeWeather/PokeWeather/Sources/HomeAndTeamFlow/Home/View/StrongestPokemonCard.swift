@@ -35,7 +35,7 @@ class StrongestPokemonCard: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = .systemIndigo
         addSubviews()
         setConstraints()
     }
@@ -44,16 +44,16 @@ class StrongestPokemonCard: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addSubviews() {
+    private func addSubviews() {
         addSubview(pokemonImage)
         addSubview(pokemonName)
         addSubview(pokemonStatus)
     }
     
-    func setConstraints() {
-        pokemonImage.addConstraints(top: topAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: -100, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 200, height: 200)
-        pokemonName.addConstraints(top: pokemonImage.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-        pokemonStatus.addConstraints(top: pokemonName.bottomAnchor, bottom: nil, leading: safeAreaLayoutGuide.leadingAnchor, trailing: nil, centerX: nil, centerY: nil, paddingTop: 36, paddingLeft: 30, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+    private func setConstraints() {
+        pokemonImage.addConstraints(top: topAnchor, centerX: centerXAnchor, paddingTop: -100, width: 200, height: 200)
+        pokemonName.addConstraints(top: pokemonImage.bottomAnchor, centerX: centerXAnchor, paddingTop: 10)
+        pokemonStatus.addConstraints(top: pokemonName.bottomAnchor, leading: safeAreaLayoutGuide.leadingAnchor, paddingTop: 36, paddingLeft: 30)
         
     }
 }

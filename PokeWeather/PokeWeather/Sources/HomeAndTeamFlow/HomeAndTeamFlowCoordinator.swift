@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator {
-    private var navigationController: UITabBarController = .init()
+class HomeAndTeamFlowCoordinator: Coordinator {
+    private var homeAndTeamTabBarController: HomeAndTeamTabBarController = .init()
     private var topViewController: UIViewController
     private var delegate: CommonsCoordinatorDelegate
     
@@ -18,11 +18,8 @@ class HomeCoordinator: Coordinator {
     }
     
     override func start() {
-//        let viewModel = TeamCreationViewModel()
-        let viewController = HomeViewController()
-        navigationController.viewControllers = [viewController]
-        navigationController.modalPresentationStyle = .fullScreen
-        topViewController.present(navigationController, animated: false, completion: nil)
+        homeAndTeamTabBarController.modalPresentationStyle = .fullScreen
+        topViewController.present(homeAndTeamTabBarController, animated: true, completion: nil)
     }
     
     override func finish() {
