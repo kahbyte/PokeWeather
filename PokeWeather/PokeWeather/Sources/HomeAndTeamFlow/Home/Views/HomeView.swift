@@ -15,7 +15,7 @@ class HomeView: UIView {
     private let weatherIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.frame = CGRect(x: 0, y: 0, width: HomeUIConstants.weatherIconFrame.width, height: HomeUIConstants.weatherIconFrame.height.adjusted)
-        imageView.image = UIImage(named: "clear")
+        imageView.image = UIImage(named: "rain")
         return imageView
     }()
     
@@ -45,7 +45,13 @@ class HomeView: UIView {
         backgroundColor = .darkGray
         addSubviews()
         setConstraints()
-        setupParticles()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .clear
+        addSubviews()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -69,21 +75,8 @@ class HomeView: UIView {
         settingsButton.addConstraints(top: safeAreaLayoutGuide.topAnchor, bottom: nil, leading: nil, trailing: safeAreaLayoutGuide.trailingAnchor, centerX: nil, centerY: nil, paddingTop: 22, paddingLeft: 0, paddingBottom: 0, paddingRight: -37, width: 50, height: 50)
         bestPokemonLabel.addConstraints(top: weatherIcon.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 71.5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         pokemonCardView.addConstraints(top: bestPokemonLabel.bottomAnchor, bottom: nil, leading: nil, trailing: nil, centerX: centerXAnchor, centerY: nil, paddingTop: 140, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 319, height: 329)
-        particlesView.addConstraints(top: topAnchor, bottom: bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, centerX: nil, centerY: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
     }
     
-    private func setupParticles() {
-        sendSubviewToBack(particlesView)
-        particlesView.allowsTransparency = true
-        
-        let particleScene = ParticleScene(size: CGSize(width: 1080, height: 1920))
-        particleScene.scaleMode = .aspectFill
-        
-        particleScene.backgroundColor = .clear
-        particleScene.setupParticleEmitter(type: "water")
-        
-        particlesView.presentScene(particleScene)
-    }
     
     private struct HomeUIConstants {
         static let weatherIconFrame = (width: CGFloat(50), height: CGFloat(50))

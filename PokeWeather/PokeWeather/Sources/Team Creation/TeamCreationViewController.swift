@@ -41,7 +41,7 @@ final class TeamCreationViewController: UIViewController, vcTestProtocol {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        viewModel.showHome()
     }
     
     private func buildView() {

@@ -18,9 +18,15 @@ class TeamView: UIView {
         return label
     }()
     
+    private let pokemonInfoCardView: PokemonInfoCard = {
+       let cardView = PokemonInfoCard(frame: CGRect(x: 0, y: 0, width: 354, height: 389))
+        cardView.layer.cornerRadius = 40
+        return cardView
+    }()
+    
     init() {
         super.init(frame: .zero)
-        backgroundColor = .blue
+        backgroundColor = .lightGray
         
         addSubviews()
         setConstraints()
@@ -32,10 +38,12 @@ class TeamView: UIView {
     
     private func addSubviews() {
         addSubview(myTeamLabel)
+        addSubview(pokemonInfoCardView)
     }
     
     private func setConstraints() {
         myTeamLabel.addConstraints(top: safeAreaLayoutGuide.topAnchor, centerX: centerXAnchor, paddingTop: 25)
+        pokemonInfoCardView.addConstraints(centerX: centerXAnchor, centerY: centerYAnchor, width: 354, height: 389)
     }
     
 }
